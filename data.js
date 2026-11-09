@@ -12,3 +12,14 @@ const movies = [
 	{ title: "컨저링 2", year: 2016, date: "2016-06-08", rating: 7.3,
 		poster: "/RTmoz2DYYOPDnTKGqkJDWKdcd6.jpg" },
 ];
+
+const boxTop = {
+	title: "극장판 치이카와: 인어 섬의 비밀",
+	year: 2026,
+	date: "2026-09-30",
+	rating: 7.4,
+	audience: 1281445,
+	poster: "/5TMyytCI5Pfc9c1eNsljiCdiB05.jpg",
+	type: "boxoffice",
+	rank: 1
+}

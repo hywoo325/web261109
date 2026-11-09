@@ -1,3 +1,4 @@
+(() => {
 // app.js : 영화 배열을 다루는 함수 6개 / 김현우(26) / 10주차
 // average : 영화 배열 ⇒ 평균 평점(숫자)
 const average = (list) => {
@@ -12,14 +13,9 @@ console.log("평균:", average(movies));
 
 // 영화 배열 ⇒ 평점이 가장 높은 영화 객체
 const best = (list) => {
-	let maxIdx = 0;
-	for (let i = 0; i < list.length; i++) {
-		if (list[maxIdx].rating < list[i].rating) {
-			maxIdx = i;
-		}
-	}
+	const max = Math.max(...list.map(m => m.rating))
 
-	return list[maxIdx];
+	return list.find(m => m.rating === max);
 }
 console.log(`가장 높은 평점의 영화:`, best(movies).title);
 
@@ -50,4 +46,8 @@ console.log(`완성된 포스터 주소: ${posterUrl(movies[0].poster, 342)}`);
 
 document.title = `내 영화 ${movies.length}편`;
 console.table(sortByRating(movies));
-document.getElementById("out").textContent = `평균 ${average(movies).toFixed(1)}점, 최고 ${best(movies).title}`
+document.getElementById("out").textContent = `평균 ${average(movies).toFixed(1)}점, 최고 ${best(movies).title}`;
+
+console.log(`박스오피스 1위 관객 수: ${boxTop.audience.toLocaleString("ko-KR")}명`);
+console.log(navigator.language, location.href);
+})();
