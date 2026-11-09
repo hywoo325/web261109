@@ -49,5 +49,10 @@ console.table(sortByRating(movies));
 document.getElementById("out").textContent = `평균 ${average(movies).toFixed(1)}점, 최고 ${best(movies).title}`;
 
 console.log(`박스오피스 1위 관객 수: ${boxTop.audience.toLocaleString("ko-KR")}명`);
+
+/*
+Live Server일 때는 로컬 ip 주소의 특정 포트로 접근해 Live Server가 보내주는 웹에 접속하지만,
+GitHub Pages는 외부 서버에 업로드되고 이에 접속하기 위한 주소가 제공되므로 두 환경에서 다르게 뜨는 것 같다.
+*/
 console.log(navigator.language, location.href);
 })();
